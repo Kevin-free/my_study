@@ -1,0 +1,62 @@
+package service
+
+import (
+	"context"
+	"fmt"
+
+	pb "call-server/api"
+	"call-server/internal/dao"
+	"call-server/internal/rpc"
+
+	"git.huoys.com/middle-end/kratos/pkg/conf/paladin"
+
+	types "github.com/gogo/protobuf/types"
+	"github.com/google/wire"
+)
+
+var Provider = wire.NewSet(New, wire.Bind(new(pb.DemoServer), new(*Service)))
+
+// Service service.
+type Service struct {
+	ac  *paladin.Map
+	dao dao.Dao
+	rpc *rpc.Client
+}
+
+// New new a service and return.
+func New(d dao.Dao, r *rpc.Client) (s *Service, cf func(), err error) {
+	s = &Service{
+		ac:  &paladin.TOML{},
+		dao: d,
+		rpc: r,
+	}
+	cf = s.Close
+	err = paladin.Watch("application.toml", s.ac)
+	return
+}
+
+// SayHello grpc demo func.
+func (s *Service) SayHello(ctx context.Context, req *pb.HelloReq) (reply *types.Empty, err error) {
+	reply = new(types.Empty)
+	s.dao.SayHello(ctx, req)
+	fmt.Printf("hello %s", req.Name)
+	return
+}
+
+// SayHelloURL bm demo func.
+func (s *Service) SayHelloURL(ctx context.Context, req *pb.HelloReq) (reply *pb.HelloResp, err error) {
+	reply = &pb.HelloResp{
+		Content: "hello " + req.Name,
+	}
+	fmt.Printf("hello url %s", req.Name)
+	return
+}
+
+// Ping ping the resource.
+func (s *Service) Ping(ctx context.Context, e *types.Empty) (*types.Empty, error) {
+	return &types.Empty{}, s.dao.Ping(ctx)
+}
+
+// Close close the resource.
+func (s *Service) Close() {
+}
