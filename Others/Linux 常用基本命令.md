@@ -305,5 +305,67 @@ vim键盘图
 
 
 
+## Sed
+
+
+
+用sed命令可以批量替换多个文件中的 字符串。 
+
+````
+sed -i "s/原字符串/新字符串/g" `grep 原字符串 -rl 所在目录`
+````
+
+例如：我要把mahuinan替换 为huinanma，执行命令： 
+
+```
+sed -i "s/mahuinan/huinanma/g" `grep mahuinan -rl /www`
+```
+
+
+
+替换带有特殊字符 "/" 的字符串，在 / 前加 \ 
+
+```
+sed -i 's/data\/nfs\/config\/1/data\/nfs\/config\/3/g' `grep "data/nfs/config/1" -rl ./3`
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
