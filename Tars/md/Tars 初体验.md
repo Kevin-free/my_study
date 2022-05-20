@@ -257,6 +257,8 @@ cd HelloGo && make && make tar
 ### 客户端开发
 
 ```go
+// HelloGo/client/client.go
+
 package main
 
 import (
@@ -305,7 +307,7 @@ func main() {
 ```shell
 [root@kaiwen HelloGo]# go build -o client/client client/client.go
 [root@kaiwen HelloGo]# ./client/client
-ret:  0 resp:  hello tarss
+ret:  0 resp:  hello tars
 ```
 
 
