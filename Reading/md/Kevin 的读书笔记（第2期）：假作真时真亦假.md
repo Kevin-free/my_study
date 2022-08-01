@@ -2,11 +2,11 @@
 
 > 转眼又到月底，与阅读的怡然自得相比写读书笔记显得痛苦不堪，虽摸着些门道，也已读了不少书，但是要将其吸收转化为自己的语言输出却终归有不少曲折。但还是要不断输入和输出，读书就像吃食物，如果只是浑沦吞枣没有消化吸收，拉出去就什么也没留下了。
 >
-> ![read_list](D:\Kevin\my_study\Reading\images\2022\07\read_list.png)
+> ![read_list](http://kevinpub.ifree258.top/my_study/reading/images/2022/07/read_list.png)
 >
 > 七月读了不少书，有多少化为己有呢？且看我一一与你分享。
 
- ![红楼梦_cover](D:\Kevin\my_study\Reading\images\2022\07\红楼梦_cover.png)
+ ![红楼梦_cover](http://kevinpub.ifree258.top/my_study/reading/images/2022/07/红楼梦_cover.png)
 
 # 红楼梦 ([清] 曹雪芹 著 高鹗 续)
 
@@ -76,21 +76,9 @@
 
  **但也不能排除就有前世有缘，今世受眼泪偿还的贾宝玉偏爱林黛玉。**
 
- 
-
-# 代码整洁之道 ([美\]Robert C. Martin)
-
-> 关键词：技术 编码
->
-> 推荐值：⭐⭐⭐
->
-> 进度值：50%
-
-
-
 # 结尾
 
-> 
+> 本月读书虽不少，但时间已少，本还有其他书和内容可分享，但输入与输出不可兼得，本期的读书笔记就到此吧。全心开始八月的读书，八月底再见~
 
 # 参考
 
